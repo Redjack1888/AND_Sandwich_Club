@@ -13,6 +13,9 @@
     <!-- Error messages-->
     <string name="detail_error_message">Sandwich data not available</string>
     <string name="no_data">No data available</string>
+    <string name="aka_content">alternative names come here</string>
+    <string name="origin_content">origin place of the sandwich</string>
+    <string name="ingredient_content">list of the ingredients</string>
 
 
     <string-array name="sandwich_names">

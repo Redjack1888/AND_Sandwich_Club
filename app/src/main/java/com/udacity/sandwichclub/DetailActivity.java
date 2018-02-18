@@ -1,6 +1,5 @@
 package com.udacity.sandwichclub;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -25,6 +24,7 @@ public class DetailActivity extends AppCompatActivity {
     private TextView tv_origin;
     private TextView tv_description;
     private TextView tv_ingredients;
+    private TextView sandwich_name;
 
 
     @Override
@@ -34,6 +34,7 @@ public class DetailActivity extends AppCompatActivity {
 
 
         ImageView ingredientsIv = findViewById(R.id.image_iv);
+        sandwich_name = findViewById(R.id.sandwich_name);
         tv_also_know = findViewById(R.id.also_known_tv);
         tv_origin = findViewById(R.id.origin_tv);
         tv_description = findViewById(R.id.description_tv);
@@ -85,6 +86,7 @@ public class DetailActivity extends AppCompatActivity {
             tv_also_know.setText(listModel(sandwich.getAlsoKnownAs()));
         }
 
+        sandwich_name.setText(sandwich.getMainName());
         tv_description.setText(sandwich.getDescription());
         tv_ingredients.setText(listModel(sandwich.getIngredients()));
 

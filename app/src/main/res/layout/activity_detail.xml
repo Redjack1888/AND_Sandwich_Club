@@ -16,25 +16,45 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <ImageView
-                android:id="@+id/image_iv"
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:adjustViewBounds="true"
-                android:contentDescription="@string/sandwich_picture_content_description"
-                android:scaleType="centerCrop"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/image_iv"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/image_height"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/sandwich_picture_content_description"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/sandwich_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:paddingBottom="@dimen/padding8"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingStart="@dimen/activity_horizontal_margin"
+                    android:shadowColor="@android:color/black"
+                    android:shadowDx="4"
+                    android:shadowDy="4"
+                    android:shadowRadius="4"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/sandwich_name_image"
+                    android:textStyle="bold|italic"
+                    tools:text="Name of the sandwich" />
+            </RelativeLayout>
 
             <LinearLayout
                 android:id="@+id/linearLayout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="16dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
+                style="@style/layout_style"
                 android:orientation="horizontal"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
@@ -43,31 +63,22 @@
 
                 <TextView
                     android:id="@+id/aka_label"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginStart="16dp"
+                    style="@style/textview_style"
                     android:text="@string/detail_also_known_as_label"
                     android:textColor="@color/colorPrimaryDark"
                     android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/also_known_tv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginStart="16dp"
-                    android:textColor="@color/secondary_text" />
+                    style="@style/textview_style"
+                    android:textColor="@color/secondary_text"
+                    tools:text="@string/aka_content" />
             </LinearLayout>
 
             <LinearLayout
 
-                android:id="@+id/origin_label"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="16dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
+                android:id="@+id/linearLayout2"
+                style="@style/layout_style"
                 android:orientation="horizontal"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
@@ -75,31 +86,22 @@
                 app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
                 <TextView
-                    android:id="@+id/textView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginStart="16dp"
+                    android:id="@+id/origin_label"
+                    style="@style/textview_style"
                     android:text="@string/detail_place_of_origin_label"
                     android:textColor="@color/primary_text"
                     android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/origin_tv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginStart="16dp"
-                    android:textColor="@color/secondary_text" />
+                    style="@style/textview_style"
+                    android:textColor="@color/secondary_text"
+                    tools:text="@string/origin_content" />
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/linearLayout5"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="16dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
+                android:id="@+id/linearLayout3"
+                style="@style/layout_style"
                 android:orientation="horizontal"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
@@ -107,31 +109,22 @@
                 app:layout_constraintTop_toBottomOf="@+id/origin_label">
 
                 <TextView
-                    android:id="@+id/textView2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginStart="16dp"
+                    android:id="@+id/ingredients_label"
+                    style="@style/textview_style"
                     android:text="@string/detail_ingredients_label"
                     android:textColor="@color/primary_text"
                     android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/ingredients_tv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginStart="16dp"
-                    android:textColor="@color/secondary_text" />
+                    style="@style/textview_style"
+                    android:textColor="@color/secondary_text"
+                    tools:text="@string/ingredient_content" />
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/linearLayout6"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="16dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
+                android:id="@+id/linearLayout4"
+                style="@style/layout_style"
                 android:orientation="vertical"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -139,11 +132,8 @@
 
 
                 <TextView
-                    android:id="@+id/textView3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginStart="16dp"
+                    android:id="@+id/description_label"
+                    style="@style/textview_style"
                     android:text="@string/detail_description_label"
                     android:textColor="@color/primary_text"
                     android:textStyle="bold" />
@@ -151,12 +141,10 @@
 
                 <TextView
                     android:id="@+id/description_tv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="16dp"
-                    android:layout_marginEnd="16dp"
-                    android:layout_marginStart="16dp"
-                    android:textColor="@color/secondary_text" />
+                    style="@style/textview_style"
+                    android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                    android:textColor="@color/secondary_text"
+                    tools:text="description of the sandwich" />
 
             </LinearLayout>
         </LinearLayout>
