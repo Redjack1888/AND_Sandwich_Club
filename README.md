@@ -1,4 +1,6 @@
-# Sandwich Club Project Starter Code
+# Sandwich Club 
+![Cover](/assets/Samsung_Galaxy_6S.jpg)
+
 
 ## Project Overview
 In this project, you will complete the **Sandwich Club** app to
